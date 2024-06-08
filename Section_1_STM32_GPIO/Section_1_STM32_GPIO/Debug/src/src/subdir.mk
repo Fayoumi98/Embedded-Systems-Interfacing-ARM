@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/src/SysTick.c 
+../src/src/SysTick.c \
+../src/src/gpio.c 
 
 OBJS += \
-./src/src/SysTick.o 
+./src/src/SysTick.o \
+./src/src/gpio.o 
 
 C_DEPS += \
-./src/src/SysTick.d 
+./src/src/SysTick.d \
+./src/src/gpio.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -32,7 +32,7 @@ src/main.o: ../src/main.c \
  ../Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h \
  ../Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h \
  ../Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h ../src/stm32f4xx_it.h \
- ../src/include/SysTick.h
+ ../src/include/SysTick.h ../src/include/gpio.h
 
 ../Libraries/Device/STM32F4xx/Include/stm32f4xx.h:
 
@@ -103,3 +103,5 @@ src/main.o: ../src/main.c \
 ../src/stm32f4xx_it.h:
 
 ../src/include/SysTick.h:
+
+../src/include/gpio.h:
