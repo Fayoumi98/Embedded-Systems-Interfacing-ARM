@@ -1,4 +1,5 @@
 core_cm4.h:1452:22:NVIC_EnableIRQ	16	static
+core_cm4.h:1535:22:NVIC_SetPriority	16	static
 gpio.c:12:13:pin_config	24	static
 gpio.c:55:13:pin_speed_config	24	static
 gpio.c:80:6:gpio_write	24	static
@@ -7,4 +8,4 @@ gpio.c:100:6:gpio_toggle	16	static
 gpio.c:109:6:gpio_init	8	static
 gpio.c:138:6:config_gpio_interrupt	24	static
 gpio.c:440:6:enable_gpio_interrupt	16	static
-gpio.c:450:6:clear_interrupt	16	static
+gpio.c:452:6:clear_interrupt	16	static

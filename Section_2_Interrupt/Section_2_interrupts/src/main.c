@@ -32,12 +32,25 @@ int main(void)
 	op.speed = VERY_HIGH_SPEED;
 	gpio_init(op);
 
+	// create External GPIO triggered interrupt EXTI1_IRQn
 	config_gpio_interrupt(on.port,on.pin,RISING_EDGE);
-	enable_gpio_interrupt(on.pin,EXTI1_IRQn);
+	enable_gpio_interrupt(on.pin,EXTI1_IRQn,1);
+
+	// create software triggered interrupt EXTI2_IRQn EXTI3_IRQn
+	NVIC_SetPriority(EXTI2_IRQn,2);
+	NVIC_SetPriority(EXTI3_IRQn,3);
+
+	NVIC_EnableIRQ(EXTI2_IRQn);
+	NVIC_EnableIRQ(EXTI3_IRQn);
 
 	while (1)
 	{
-		gpio_toggle(tp.port,tp.pin);
+
+		NVIC_SetPendingIRQ(EXTI2_IRQn);
+		SysTick_Delay(100);
+		NVIC_SetPendingIRQ(EXTI3_IRQn);
+		SysTick_Delay(100);
+
 	}
 }
 

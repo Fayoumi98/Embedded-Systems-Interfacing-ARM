@@ -161,7 +161,7 @@ void config_gpio_interrupt(GPIO_TypeDef *port, uint32_t pinNumber, edge_select e
 * 				 IRQn_Type irq_number
 * Return value : void
 *****************************************************************************/
-void enable_gpio_interrupt(uint32_t pinNumber, IRQn_Type irq_number);
+void enable_gpio_interrupt(uint32_t pinNumber, IRQn_Type irq_number, uint8_t priority);
 
 
 /*****************************************************************************

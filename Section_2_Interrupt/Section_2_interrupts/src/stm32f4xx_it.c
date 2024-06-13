@@ -29,6 +29,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
+#include "include/gpio.h"
 
 /** @addtogroup Template_Project
   * @{
@@ -143,6 +144,32 @@ void SysTick_Handler(void)
 {
 	SysTick_IncrementTicks_cb();
 }
+
+
+/**
+  * @brief  This function handles EXTI2 Handler.
+  * @param  None
+  * @retval None
+  */
+void EXTI2_IRQHandler(void)
+{
+	gpio_write(PORTA,6,1);
+}
+
+
+
+
+
+/**
+  * @brief  This function handles EXTI3 Handler.
+  * @param  None
+  * @retval None
+  */
+void EXTI3_IRQHandler(void)
+{
+	gpio_write(PORTA,6,0);
+}
+
 
 
 

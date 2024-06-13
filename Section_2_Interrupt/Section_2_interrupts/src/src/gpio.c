@@ -437,8 +437,10 @@ void config_gpio_interrupt(GPIO_TypeDef *port, uint32_t pinNumber, edge_select e
 
 
 
-void enable_gpio_interrupt(uint32_t pinNumber, IRQn_Type irq_number)
+void enable_gpio_interrupt(uint32_t pinNumber, IRQn_Type irq_number, uint8_t priority)
 {
+	// set interrupt priority
+	NVIC_SetPriority(irq_number,priority);
 	// enable interrupt in EXTI
 	SETBIT(EXTI->IMR,pinNumber);
 	// enable interrupt in NVIC
