@@ -156,6 +156,5 @@ void EXTI3_IRQHandler(void)
 void DMA2_Stream0_IRQHandler(void)
 {
 	gpio_write(PORTA,6,1);
-	SysTick_Delay(3000);
 }
 

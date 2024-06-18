@@ -42,10 +42,15 @@ int main(void)
 	NVIC_SetPriority(DMA2_Stream0_IRQn,2);
 	NVIC_EnableIRQ(DMA2_Stream0_IRQn);
 
-	gpio_write(PORTA,6,0);
+	gpio_write(PORTA,6,1);
+
+	SysTick_Delay(5000);
+
+
 
 	DMA2_Stream_Init();
 	DMA2_Stream_SetAdresses(srcBuffer , dstBuffer , BUFFER_SIZE);
+
 
 
 	// initialize source buffer
@@ -54,10 +59,13 @@ int main(void)
 		srcBuffer[idx] = idx * idx;
 	}
 
+	gpio_write(PORTA,6,0);
+
 	DMA2_Stream_Enable();
+
+
 
 	while (1)
 	{
-
 	}
 }
