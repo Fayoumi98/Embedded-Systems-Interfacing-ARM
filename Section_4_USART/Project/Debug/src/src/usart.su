@@ -1,0 +1,9 @@
+core_cm4.h:1452:22:NVIC_EnableIRQ	16	static
+usart.c:18:6:USART1_GPIO_Enable	64	static
+usart.c:64:6:USART1_Init	4	static
+usart.c:106:6:USART1_Enable	8	static
+usart.c:130:6:USART1_SendData	16	static
+usart.c:140:6:USART1_WriteString	16	static
+usart.c:149:9:USART1_ReceiveData	4	static
+usart.c:159:9:USART1_ReceiveString	24	static
+usart.c:178:6:USART1_IRQHandler	16	static
