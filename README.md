@@ -7,13 +7,17 @@ Embedded Systems STM32F401VE (CORTEX M4) Interfacing
 
 
 ### Exercises
-* ✅ 1 : GPIO & Delay (SysTick)
-* ✅ 2 : Interrupts
-* ✅ 3 : DMA controller (Direct Memory Access)
-* ✅ 4 : 
-* ✅ 5 : 
-* ✅ 6 : 
-
+* ✅ 1  : GPIO & Delay (SysTick)
+* ✅ 2  : Interrupts
+* ✅ 3  : DMA controller (Direct Memory Access)
+* ✅ 4  : USART
+* ✅ 5  : LIN
+* ✅ 6  : RCC Config
+* ✅ 7  : Counter
+* ✅ 8  : PWM Input Capture
+* ✅ 9  : PWM Output Compare
+* ✅ 10 : ADC & DAC
+* ✅ 11 : I2C
 
 <!-- CONTACT -->
 ## Contact
